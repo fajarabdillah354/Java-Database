@@ -1,0 +1,13 @@
+AUTO INCREMENT
+- kadang setelah melakukan insert data ke database yang memiliki primary key auto increment, kita ingin mendapatkan data id terbarunya
+- di MySql sebenernya kita bisa melakukan query SELECT LAST_INSERT_ID(), namun berarti kita harus melakukan query ulang dengan statement dan melakukan iterasi lagi dengan ResulSet
+- untungnya di jdbc, ada kemampuan untk mendapatkan auto generate data seperti auto increment dengan method getGenerateKeys() yang mengembalikan ResultSet
+- selanjutnya kita bisa melakukan iterasi terhadap ResultSet
+
+
+CARA MENDAPATKAN AUTO GENERATE KEY
+- secara default, statement ataupun PreparedStatement tidak mengerti untuk mengambil auto generate key
+- kita perlu memberi tahunya agar Statement ataupun PreparedStatement mengambil auto generate id secara otomatis
+- untuk Statement, kita perlu memberi tahu ketika memanggil method exeuteUpdate(sql, Statement.RETURN_GENERATE_KEYS)
+- sedangkan untuk PreparedStatement, kita perlu memberi tahu ketika membuat preparedStatement(sql,Statement.RETURN_GENERATE_KEYS)
+- setelah itu , untuk mendapatkan autoo generate key kita bisa mengggunakan method getGenerateKeys(), methood ini akan error jika kita lupa mengirim parameter keys(RETU....)
