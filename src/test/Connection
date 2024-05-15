@@ -1,0 +1,16 @@
+Connection
+
+- setelah melakukan registrasi Driver ke JDBC ,kita bisa mulai melakukan koneksi ke database
+= untuk melakukan koneksi ke database kita harus memberi tahu jenis database,host,port,username,dan password
+- semua itu biasanya direpresentasika oleh interface java.sql.Connection
+
+
+MySQL JDBC URL
+- tiap database biasanya punya format jdbc url sendiri-sendiri
+- contoh di mysql = jdbc:mysql://host:port/namadatabase
+
+
+Menutup connection
+- saat kita selesai menggunakan connectionn,disarankan untuk selalu menutup connection tersebut
+- jika sebulum connection tidak kita tutup,maka selama aplikasi kita berjalan, koneksi ke db akan selalu terbuka
+- jika connection yang terbuka terlalu banyak,ditakutkan nanti tidak bisa membuka koneksi lagi ke database dikarenakan sudah menyentuh nilai maksmul

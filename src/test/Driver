@@ -1,0 +1,31 @@
+Driver
+
+- adalah jembatan penghubung JDBC dan database managemant system yang akan kita gunnakan
+- tanpa Driver tidak bisa connect ke database
+- Driver di JDBC direpresentasikan oleh interface java.sql.Driver
+
+MySQL Driver
+- MySQL sudah menyediakan driver untuk jdbc
+- kita bisa cari MySQL Driver dengan menggunakan kata kunci mysql-connector-java di https://searc.mavem.org/
+- setelah itu kita bisa menambahkan ke dalam dependency kita
+
+REGISTRASI DRIVER KE JDBC
+- setelah menambahkan dependency MySQL Driver ke project kita
+- kita perlu melakukan registrasi Driver terlebih dahulu
+- untuk melakukan registrasi driver, kita bisa mengggunakan static method registerDriver milik class java.sql.DriverManager
+
+
+CONTOH REGISTRASI
+@Test
+    void testRegisterDriver() {
+
+        try{
+            Driver testDriver = new com.mysql.cj.jdbc.Driver();
+            DriverManager.registerDriver(testDriver);
+        }catch (SQLException sqlException){
+            Assertions.fail();
+        }
+
+    }
+
+    nb =  apapun itu di jdbc akan menghasilkan exeption maka kita perlu try catch
