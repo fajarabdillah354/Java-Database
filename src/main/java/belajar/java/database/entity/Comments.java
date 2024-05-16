@@ -1,12 +1,9 @@
 package belajar.java.database.entity;
 
 public class Comments {
-
+    private Integer id;
     private String email;
-
     private String comment;
-
-    private int id;
 
     public Comments() {
     }
@@ -16,9 +13,17 @@ public class Comments {
         this.comment = comment;
     }
 
-    public Comments(String email, String comment, int id) {
+    public Comments(Integer id, String email, String comment) {
+        this.id = id;
         this.email = email;
         this.comment = comment;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,12 +43,5 @@ public class Comments {
         this.comment = comment;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 }

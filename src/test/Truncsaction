@@ -1,0 +1,11 @@
+DATABASE TRANSACTION
+- fitur paling bermanfaat di database salah satunya adalah trunsaction
+- fitur database transaction pun bisa kita jalankan menggunakan JDBC
+
+AUTO COMMIT
+- secara default, Connection yang kita buat menggunakan JDBC memiliki sifat auto commit
+- auto commit artinya setiap perintah SQL yang kita kirim akan langsung di commit secara otomatis
+- dalam database transaction, kita biasanya melakukan commit transaction setelah semua proses selesai, maka kita perlu mematikan auto commit di JDBC
+- untuk mematikan fitur auto commit di JDBC, kita bisa menggunakan method di Connection setAutoCommit(false) ini karna defaultnya True
+- setelah selesai melakukan proses, kita bisa melakukan commit transaction dengan menggunakan method commit() milik Connection
+- untuk membatalkan proses transaksi (rollback) kita bisa menggunakan method rollback() milik Connection
