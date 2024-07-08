@@ -98,6 +98,39 @@ public class CommentsRepositoryImpl implements CommentsRepository{
         }
     }
 
+    @Override
+    public List<Comments> deleteById(Integer id) {
+        try(Connection connection = ConnectionUtil.getDataSource().getConnection()) {
+            String sql= "Delete FROM comments WHERE id = ?";
+            try(PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setInt(1,id);
+                List<Comments> comments = new ArrayList<>();
+                int update = preparedStatement.executeUpdate();
+                System.out.println(update + " data berhasil dihapus");
+                return comments;
+            }
+
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Comments deleteAllRecord() {
+        try(Connection connection = ConnectionUtil.getDataSource().getConnection()) {
+            try(Statement statement = connection.createStatement()) {
+                Comments comments = new Comments();
+                String sql = "DELETE FROM comments";
+                statement.executeUpdate(sql);
+                System.out.println("sukses menghapus data record table Comments");
+                return comments;
+            }
+
+
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 
 
 }

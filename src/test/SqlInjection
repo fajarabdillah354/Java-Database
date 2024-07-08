@@ -1,0 +1,15 @@
+SQL Dengan Parameter
+- saat membuat aplikasi, kita tidak mungking akan melakukan hardcode perintah SQL di kode java kitta
+- biasanya kita akan menerima input dari user, lalu membuatt perintah SQL dari innput user, dan mengirimnya menggunnakan perintah SQL
+
+SQL INJECTION
+- sql injection adalah sebuah teknik yang menyalahgunakan sebuah celah keamanan yang terjadi dalam lapisan basis data sebuah apk
+- biasanya sql injection dilakukan dengan mengirim input dari user dengan perintah yang salah, sehingga menyebabkan hasil sql yang kita buat menjadi tidak valid
+- sql injection sangat berbahaya,jika kita salah membuat sql maka data kita tidak aman
+
+SOLUSINYA?
+- statement tidak didesain untuk bisa menangani SQL injection
+- oleh karna itu, jika SQL query yang kita gunakan dibuat berdasarkan input user, maka kita jangan menggunakan statement
+- untuk menghindari SQL injection, terdapat interface bernama PreparedStatement, ini jenis statement yang menengani SQL injection dengan baik
+ intinya jika membuat sql script yang tanpa input user kita bisa langsung gunakan statement contoh select tanpa parameter
+ tapi jika kita butuh maka tidak bisa menggunnakan statementt lagi karna berbahaya lebih baik menggunakan preparedstatement

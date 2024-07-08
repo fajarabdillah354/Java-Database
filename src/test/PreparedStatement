@@ -1,0 +1,14 @@
+PREPAREDSTATEMENT
+- praparedstatement adalah turunan dari statement, jadi apapun yang bisa dilakukan statement, bisa dilakukan juga oleh PrepareStatement
+- yang membedakan preparedstatement dari statement adalah, preparedstatement memiliki kemampuan untuk mengamankan input dari user sehingga aman dari seranngan sql INJECTION
+
+MEMBUAT PREPAREDSTATEMENT
+- berbeda dengan statement, para preparedstatement ketika pembuataanya sudah ditentukan sql apa yang kita gunakan
+- oleh karena itu, preparedstatement biasanya digunakan untuk sekali mengirim perintah sql,jika ingin mengirim perintah sql lagi, kita harus membuat preparedstatement baru
+- untuk membuat preparedstatement, kita bisa menggunakan methood preparedStatement(sql) milik Connection
+
+MENERIMA INPUT USER
+- sekarang pertanyaannya , bagaimana cara menerima input user menggunakan PreparedStatement
+- untuk menerima input dari user, sql yang kita buat harus diubah juga
+- input dari user, perlu kita ubah menjadi ?(tanda tanya)
+- nanti ketika pembuatan object, kita bisa mensubstitusi datanya menggunakan setXxx(index, value) sesuai dengan tipe datanyya,misa setString()

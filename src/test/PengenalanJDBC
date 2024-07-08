@@ -1,0 +1,10 @@
+Pengenalan JDBC
+- jdbc adalah singkatann dari java database connectivity
+- jdbc merupakan spesifikasi API standard untuk mengakses database di java
+- jdbc tidak bisa langsung digunakan,karena isinya hanyalah interface-interface kontrak untuk berinteraksi dengan database
+- jdbc perlu implementasi, atau biasa disebut dengan Drive, seperti MySQL Driver, PostgreSQL, DLL
+
+CARA KERJA JDBC
+
+App -> JDBC -> Driver -> Database
+

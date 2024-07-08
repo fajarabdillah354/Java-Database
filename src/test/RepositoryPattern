@@ -1,0 +1,4 @@
+Repository Pattern
+- dalam buku Domain - Driven Design, Eri Evans menjelaskan bahwa"repository is mechanism for encapsulating storage, retrrieval, and search behavior, which emulates a collection of object
+- Pattern Repository ini biasanya digunakan sebagai jembatan antar business logic aplikasi kita dengan semua perintah SQL ke database
+- jadi semua perintah SQL akan ditulis di repository, sedangkan busisness logic kita hanya memanggil repository

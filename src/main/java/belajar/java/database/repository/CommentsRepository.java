@@ -13,4 +13,9 @@ public interface CommentsRepository{
 
     List<Comments> findByEmail(String email);
 
+    List<Comments> deleteById(Integer id);
+
+    Comments deleteAllRecord();
+
+
 }

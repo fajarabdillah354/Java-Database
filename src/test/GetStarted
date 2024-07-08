@@ -1,0 +1,10 @@
+- sebelum kita membuat project kita install dulu maven dalam project kita
+- caranya mvn archetype:generate, lalu pilih maven-archetype-quickstart
+
+
+Junit(testing)
+- untuk testing kita mengggunakan JUnit versi 5
+- jangan lupa kita tambahkan dependency untuk project kita jangan lupa tambahkan tag scope lalu valuenya test
+- selain itu kita juga perlu menyesuaikan versi JDK sesuai denggan yang kita gunakan
+
+
